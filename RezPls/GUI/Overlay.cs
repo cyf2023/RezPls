@@ -129,21 +129,21 @@ namespace RezPls.GUI
             {
                 if (state.HasStatus)
                     return _drawDispels
-                        ? (CastType.Dispel, "Needs Cleanse", RezPls.Config.ShowIconDispel, RezPls.Config.ShowInWorldTextDispel)
+                        ? (CastType.Dispel, "需要康复", RezPls.Config.ShowIconDispel, RezPls.Config.ShowInWorldTextDispel)
                         : (CastType.None, "", false, false);
 
                 return _drawRaises
-                    ? (CastType.Raise, "Already Raised", RezPls.Config.ShowIcon, RezPls.Config.ShowInWorldText)
+                    ? (CastType.Raise, "已复活", RezPls.Config.ShowIcon, RezPls.Config.ShowInWorldText)
                     : (CastType.None, "", false, false);
             }
 
             if (state.Type == CastType.Raise)
                 return _drawRaises
-                    ? (CastType.Raise, $"Raise: {name}", RezPls.Config.ShowIcon, RezPls.Config.ShowInWorldText)
+                    ? (CastType.Raise, $"复活中: {name}", RezPls.Config.ShowIcon, RezPls.Config.ShowInWorldText)
                     : (CastType.None, "", false, false);
 
             return _drawDispels
-                ? (CastType.Raise, $"Cleanse: {name}", RezPls.Config.ShowIconDispel, RezPls.Config.ShowInWorldTextDispel)
+                ? (CastType.Raise, $"康复中: {name}", RezPls.Config.ShowIconDispel, RezPls.Config.ShowInWorldTextDispel)
                 : (CastType.None, "", false, false);
         }
 
