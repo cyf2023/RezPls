@@ -298,7 +298,7 @@ namespace RezPls.GUI
         private void DrawRectTypeSelector()
         {
             var type = (int) RezPls.Config.RectType;
-            if (!ImGui.Combo("Rectangle Type", ref type, RectTypeStrings, RectTypeStrings.Length))
+            if (!ImGui.Combo("矩形高亮框样式", ref type, RectTypeStrings, RectTypeStrings.Length))
                 return;
 
             ChangeAndSave(type, (int) RezPls.Config.RectType, t => RezPls.Config.RectType = (RectType) t);

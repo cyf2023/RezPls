@@ -1,11 +1,9 @@
 ﻿name: RezPls
 author: Ottermandias
 description: |-
-  Easy overview about who is currently resurrecting who,
-  who is already resurrected,
-  and who has removable detrimental status effects in the world 
-  as well as in the group or alliance interface.
-punchline: Highlighting of Raises and detrimental status effects.
+  轻松查看谁在复活谁，谁已被复活，谁有可康复的负面状态。
+  在世界中与小队、团队界面都能轻松查看。
+punchline: 高亮复活与负面状态。
 repo_url: https://github.com/Ottermandias/RezPls
 dalamud_api_level: 8
 tags:

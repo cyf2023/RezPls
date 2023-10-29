@@ -302,13 +302,13 @@ namespace RezPls.GUI
         private string GetActorName(CastType type, uint corpse, uint caster)
         {
             if (type == CastType.Dispel)
-                return Names.TryGetValue(caster, out var name) ? name : "Unknown";
+                return Names.TryGetValue(caster, out var name) ? name : "未知";
             if (corpse == caster)
-                return "LIMIT BREAK";
+                return "极限技";
             if (caster == 0)
                 return string.Empty;
 
-            return Names.TryGetValue(caster, out var name2) ? name2 : "Unknown";
+            return Names.TryGetValue(caster, out var name2) ? name2 : "未知";
         }
 
         private Vector3? GetActorPosition(uint corpse)
