@@ -1,3 +1,7 @@
 # RezPls
-Signify players currently being resurrected or already resurrected in group/alliance interface and on the ground.
-Also displays characters with dispellable status effects.
+在小队/团队界面中与游戏世界中标记正在被复活或已被复活的玩家。
+也会显示被负面状态影响的玩家。
+
+## 汉化相关
+因为自己需要就翻译了。  
+但水平有限，不恰当处请直接指正。

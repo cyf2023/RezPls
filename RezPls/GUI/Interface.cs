@@ -110,8 +110,8 @@ namespace RezPls.GUI
         private void DrawRestrictJobsCheckbox()
             => DrawCheckbox("仅限有复活的职业",
                 "仅在你是具有复活能力的职业时显示复活信息。\n"
-              + "CNJ, WHM, ACN, SCH, SMN, AST, BLU, RDM (at 64+)."
-              + "Ignores Lost and Logos Actions.（没懂，欢迎指点）\n", RezPls.Config.RestrictedJobs,
+              + "幻术，白魔，秘术，学者，召唤，占星，青魔，赤魔（64级以上）。\n"
+              + "不包括失传技能和文理技能。\n", RezPls.Config.RestrictedJobs,
                 e => RezPls.Config.RestrictedJobs = e);
 
         private void DrawDispelHighlightingCheckbox()
@@ -122,7 +122,7 @@ namespace RezPls.GUI
         private void DrawRestrictJobsDispelCheckbox()
             => DrawCheckbox("仅限有康复的职业",
                 "仅在你是具有康复能力的职业时显示康复信息。\n"
-              + "CNJ, WHM, SCH, AST, BRD (at 35+), BLU",
+              + "幻术，白魔，学者，占星，诗人（35级以上），青魔\n",
                 RezPls.Config.RestrictedJobsDispel, e => RezPls.Config.RestrictedJobsDispel = e);
 
         private void DrawTestModeCheckBox1()
