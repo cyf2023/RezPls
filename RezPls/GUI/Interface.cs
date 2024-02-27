@@ -50,7 +50,7 @@ namespace RezPls.GUI
         }
 
         private void DrawEnabledCheckbox()
-            => DrawCheckbox("Enabled", "Enable or disable the plugin.", RezPls.Config.Enabled, e =>
+            => DrawCheckbox("启用", "启用或禁用这个插件。", RezPls.Config.Enabled, e =>
             {
                 RezPls.Config.Enabled = e;
                 if (e)
@@ -60,98 +60,98 @@ namespace RezPls.GUI
             });
 
         private void DrawHideSymbolsOnSelfCheckbox()
-            => DrawCheckbox("Hide Symbols on Self", "Hide the symbol and/or text drawn into the world on the player character.",
+            => DrawCheckbox("隐藏自己身上的图标", "隐藏游戏中玩家角色身上的图标以及文本。",
                 RezPls.Config.HideSymbolsOnSelf,    e => RezPls.Config.HideSymbolsOnSelf = e);
 
         private void DrawEnabledRaiseCheckbox()
-            => DrawCheckbox("Enable Raise Highlighting",
-                "Highlight players being raised.", RezPls.Config.EnabledRaise, e => RezPls.Config.EnabledRaise = e);
+            => DrawCheckbox("启用复活高亮",
+                "高亮正在被复活的玩家。", RezPls.Config.EnabledRaise, e => RezPls.Config.EnabledRaise = e);
 
         private void DrawShowGroupCheckbox()
-            => DrawCheckbox("Highlight in Party Frames",
-                "Highlights players in your party frames according to your color and state selection.",
+            => DrawCheckbox("在小队界面中高亮",
+                "根据你选择的颜色和状态在你的小队界面高亮玩家。",
                 RezPls.Config.ShowGroupFrame,
                 e => RezPls.Config.ShowGroupFrame = e);
 
         private void DrawShowAllianceCheckbox()
-            => DrawCheckbox("Highlight in Alliance Frames",
-                "Highlights players in your alliance frames according to your color and state selection.",
+            => DrawCheckbox("在团队界面中高亮",
+                "根据你选择的颜色和状态在你的团队界面高亮玩家",
                 RezPls.Config.ShowAllianceFrame,
                 e => RezPls.Config.ShowAllianceFrame = e);
 
         private void DrawShowCasterNamesCheckbox()
-            => DrawCheckbox("Write Caster Names",
-                "When highlighting players, also write the name of a caster resurrecting or cleansing them in the frame.",
+            => DrawCheckbox("写出施法者的名字",
+                "在高亮玩家时，也在界面中写出正在对其使用复活或者康复的施法者的名字。",
                 RezPls.Config.ShowCasterNames,
                 e => RezPls.Config.ShowCasterNames = e);
 
         private void DrawShowIconCheckbox()
-            => DrawCheckbox("Draw In World Icon",
-                "Draw a Raised icon on corpses that are already raised or currently being raised.", RezPls.Config.ShowIcon,
+            => DrawCheckbox("在世界中绘制图标",
+                "在正在被复活或已复活的尸体上绘制一个已复活图标", RezPls.Config.ShowIcon,
                 e => RezPls.Config.ShowIcon = e);
 
         private void DrawShowIconDispelCheckbox()
-            => DrawCheckbox("Draw In World Icon##Dispel",
-                "Draw a debuff icon on players that have a removable detrimental status effect.", RezPls.Config.ShowIconDispel,
+            => DrawCheckbox("在世界中绘制图标##Dispel",
+                "在有可康复的负面状态的玩家身上绘制一个负面状态图标。", RezPls.Config.ShowIconDispel,
                 e => RezPls.Config.ShowIconDispel = e);
 
         private void DrawShowInWorldTextCheckbox()
-            => DrawCheckbox("Draw In World Text",
-                "Writes the current resurrector under a corpse currently being raised, or that he is already raised.",
+            => DrawCheckbox("在世界中绘制文本",
+                "在正在被复活或已复活的尸体下注明当前复活施法者。",
                 RezPls.Config.ShowInWorldText,
                 e => RezPls.Config.ShowInWorldText = e);
 
         private void DrawShowInWorldTextDispelCheckbox()
-            => DrawCheckbox("Draw In World Text##Dispel",
-                "Writes the current caster under an afflicted player currently being cleansed, or that he has a removable detrimental status effect.",
+            => DrawCheckbox("在世界中绘制文本##Dispel",
+                "在正在被康复的玩家下注明当前康复施法者。",
                 RezPls.Config.ShowInWorldTextDispel,
                 e => RezPls.Config.ShowInWorldTextDispel = e);
 
         private void DrawRestrictJobsCheckbox()
-            => DrawCheckbox("Restrict to resurrecting Jobs",
-                "Only display the resurrecting information when you are a job with inherent raise capabilities.\n"
-              + "CNJ, WHM, ACN, SCH, SMN, AST, BLU, RDM (at 64+)."
-              + "Ignores Lost and Logos Actions.\n", RezPls.Config.RestrictedJobs,
+            => DrawCheckbox("仅限有复活的职业",
+                "仅在你是具有复活能力的职业时显示复活信息。\n"
+              + "幻术，白魔，秘术，学者，召唤，占星，青魔，赤魔（64级以上）。\n"
+              + "不包括失传技能和文理技能。\n", RezPls.Config.RestrictedJobs,
                 e => RezPls.Config.RestrictedJobs = e);
 
         private void DrawDispelHighlightingCheckbox()
-            => DrawCheckbox("Enable Cleanse Highlighting",
-                "Highlight players with removable detrimental status effects.",
+            => DrawCheckbox("启用可康复高亮",
+                "高亮具有可康复负面状态的玩家。",
                 RezPls.Config.EnabledDispel, e => RezPls.Config.EnabledDispel = e);
 
         private void DrawRestrictJobsDispelCheckbox()
-            => DrawCheckbox("Restrict to cleansing Jobs",
-                "Only displays the cleansing information when you are a job with inherent cleanse capabilities.\n"
-              + "CNJ, WHM, SCH, AST, BRD (at 35+), BLU",
+            => DrawCheckbox("仅限有康复的职业",
+                "仅在你是具有康复能力的职业时显示康复信息。\n"
+              + "幻术，白魔，学者，占星，诗人（35级以上），青魔\n",
                 RezPls.Config.RestrictedJobsDispel, e => RezPls.Config.RestrictedJobsDispel = e);
 
         private void DrawTestModeCheckBox1()
-            => DrawCheckbox("Test Player Raised", "Should show the active \"Already Raised\" effects on the player character and party frames.",
+            => DrawCheckbox("玩家复活测试", "应在玩家角色和小队界面上显示激活的“已复活”效果。",
                 ActorWatcher.TestMode == 1,       e => ActorWatcher.TestMode = e ? 1 : 0);
 
         private void DrawTestModeCheckBox2()
-            => DrawCheckbox("Test Player Being Raised by Target",
-                "Should show the active \"Currently Being Raised\" effects on the player character and party frames, as if the caster is its current target.",
+            => DrawCheckbox("玩家被目标复活测试",
+                "应在玩家角色和小队界面上显示激活的“被复活中”效果，施法者为玩家当前目标。",
                 ActorWatcher.TestMode == 2, e => ActorWatcher.TestMode = e ? 2 : 0);
 
         private void DrawTestModeCheckBox3()
-            => DrawCheckbox("Test Player Unnecessary Raise",
-                "Should show the active \"Unnecessary Raise\" effects on the player character, as if the player character and its current target raise it.",
+            => DrawCheckbox("玩家不需要复活测试",
+                "应在玩家角色上显示激活的“不需要复活”效果，就像玩家角色与当前目标复活的一样。",
                 ActorWatcher.TestMode == 3, e => ActorWatcher.TestMode = e ? 3 : 0);
 
         private void DrawTestModeCheckBox4()
-            => DrawCheckbox("Test Player Negative Status Effect",
-                "Should show the active \"Has Monitored Status Effect\" effects on the player character, as if the player character has a monitored condition.",
+            => DrawCheckbox("玩家负面状态测试",
+                "应在玩家角色上显示激活的“具有被监控的状态”效果，就像玩家角色有被监控的状态一样。",
                 ActorWatcher.TestMode == 4, e => ActorWatcher.TestMode = e ? 4 : 0);
 
         private void DrawTestModeCheckBox5()
-            => DrawCheckbox("Test Player Negative Status Effect Being Cleansed",
-                "Should show the active \"Currently Being Cleaned\" effects on the player character, as if it is being cleansed by its current target.",
+            => DrawCheckbox("玩家负面状态被康复测试",
+                "应在玩家角色上显示激活的“被康复中”效果，就像正在被当前目标康复一样。",
                 ActorWatcher.TestMode == 5, e => ActorWatcher.TestMode = e ? 5 : 0);
 
         private void DrawTestModeCheckBox6()
-            => DrawCheckbox("Test Player Unnecessary Cleanse",
-                "Should show the active \"Unnecessary Cleanse\" effects on the player character, as if it uses a double cleanse or a cleanse with no monitored status.",
+            => DrawCheckbox("玩家不需要康复测试",
+                "应在玩家角色上显示激活的“不需要康复”效果，就像被两个人康复或者康复没有可驱散状态一样。",
                 ActorWatcher.TestMode == 6, e => ActorWatcher.TestMode = e ? 6 : 0);
 
 
@@ -181,10 +181,10 @@ namespace RezPls.GUI
 
             if (which)
             {
-                if (ImGui.Button("Disable All Statuses", width / 2 * Vector2.UnitX))
+                if (ImGui.Button("禁用所有状态", width / 2 * Vector2.UnitX))
                     _plugin.StatusSet.ClearEnabledList();
             }
-            else if (ImGui.Button("Enable All Statuses", width / 2 * Vector2.UnitX))
+            else if (ImGui.Button("启用所有状态", width / 2 * Vector2.UnitX))
             {
                 _plugin.StatusSet.ClearDisabledList();
             }
@@ -192,8 +192,8 @@ namespace RezPls.GUI
 
         private static void DrawStatusSelectorTitles(float width)
         {
-            const string disabledHeader = "Disabled Statuses";
-            const string enabledHeader  = "Monitored Statuses";
+            const string disabledHeader = "禁用的状态";
+            const string enabledHeader  = "监控的状态";
             var          pos1           = width / 4 - ImGui.CalcTextSize(disabledHeader).X / 2;
             var          pos2           = 3 * width / 4 + ImGui.GetStyle().ItemSpacing.X - ImGui.CalcTextSize(enabledHeader).X / 2;
             ImGui.SetCursorPosX(pos1);
@@ -210,9 +210,9 @@ namespace RezPls.GUI
             DrawStatusSelectorTitles(width);
             ImGui.SetNextItemWidth(width);
             ImGui.InputTextWithHint("##statusFilter", "Filter...", ref _statusFilter, 64);
-            DrawSingleStatusEffectList("Disabled Statuses", true, width);
+            DrawSingleStatusEffectList("禁用的状态", true, width);
             ImGui.SameLine();
-            DrawSingleStatusEffectList("Monitored Statuses", false, width);
+            DrawSingleStatusEffectList("监控的状态", false, width);
         }
 
 
@@ -236,42 +236,42 @@ namespace RezPls.GUI
         }
 
         private void DrawCurrentRaiseColorPicker()
-            => DrawColorPicker("Currently Being Raised",
-                "The highlight color for a player that is currently being raised by other players or only by yourself.",
+            => DrawColorPicker("正在被复活",
+                "正在被其他玩家或者你自己复活的玩家的高亮色。",
                 RezPls.Config.CurrentlyRaisingColor, RezPlsConfig.DefaultCurrentlyRaisingColor, c => RezPls.Config.CurrentlyRaisingColor = c);
 
 
         private void DrawAlreadyRaisedColorPicker()
-            => DrawColorPicker("Already Raised",
-                "The highlight color for a player that is already raised and not also currently being raised by yourself.",
+            => DrawColorPicker("已复活",
+                "已复活且没有正在被你复活的玩家的高亮色。",
                 RezPls.Config.RaisedColor, RezPlsConfig.DefaultRaisedColor, c => RezPls.Config.RaisedColor = c);
 
         private void DrawDoubleRaiseColorPicker()
-            => DrawColorPicker("Redundant Cast",
-                "The highlight color for a player that you are currently raising if they are already raised or someone else is also raising them,\n"
-              + "if you and another player cleanse them, or if you cleanse someone without monitored detrimental status effects.",
+            => DrawColorPicker("冗余咏唱",
+                "你正在复活已复活的玩家或其他人与你一同复活的玩家的高亮色，\n"
+              + "以及你与他人一起康复的玩家或康复没有被监控的负面状态的玩家的高亮色。",
                 RezPls.Config.DoubleRaiseColor, RezPlsConfig.DefaultDoubleRaiseColor, c => RezPls.Config.DoubleRaiseColor = c);
 
         private void DrawInWorldBackgroundColorPicker()
-            => DrawColorPicker("In World Background",
-                "The background color for text that is drawn into the world on corpses for raises.",
+            => DrawColorPicker("在世界中的背景色",
+                "世界中显示在尸体上的文本的背景色。",
                 RezPls.Config.InWorldBackgroundColor, RezPlsConfig.DefaultInWorldBackgroundColorRaise,
                 c => RezPls.Config.InWorldBackgroundColor = c);
 
         private void DrawInWorldBackgroundColorPickerDispel()
-            => DrawColorPicker("In World Background (Cleanse)",
-                "The background color for text that is drawn into the world on characters that are afflicted by a watched detrimental status effect.",
+            => DrawColorPicker("在世界中的背景色（康复）",
+                "世界中显示在具有被监控的负面状态的玩家上的文本的背景色。",
                 RezPls.Config.InWorldBackgroundColorDispel, RezPlsConfig.DefaultInWorldBackgroundColorDispel,
                 c => RezPls.Config.InWorldBackgroundColorDispel = c);
 
         private void DrawDispellableColorPicker()
-            => DrawColorPicker("Has Monitored Status Effect",
-                "The highlight color for a player that has any monitored detrimental status effect.",
+            => DrawColorPicker("具有被监控的状态",
+                "具有任何被监控的负面状态的玩家的高亮色。",
                 RezPls.Config.DispellableColor, RezPlsConfig.DefaultDispellableColor, c => RezPls.Config.DispellableColor = c);
 
         private void DrawCurrentlyDispelledColorPicker()
-            => DrawColorPicker("Currently Being Cleansed",
-                "The highlight color for a player that is currently being cleansed by other players or only by yourself.",
+            => DrawColorPicker("正在被康复",
+                "正在被其他玩家或者仅你自己康复的玩家的高亮色。",
                 RezPls.Config.CurrentlyDispelColor, RezPlsConfig.DefaultCurrentlyDispelColor, c => RezPls.Config.CurrentlyDispelColor = c);
 
         private void DrawScaleButton()
@@ -281,24 +281,24 @@ namespace RezPls.GUI
             const float step = 0.005f;
 
             var tmp = RezPls.Config.IconScale;
-            if (ImGui.DragFloat("In World Icon Scale", ref tmp, step, min, max))
+            if (ImGui.DragFloat("在世界中的图标尺寸", ref tmp, step, min, max))
                 ChangeAndSave(tmp, RezPls.Config.IconScale, f => RezPls.Config.IconScale = Math.Max(min, Math.Min(f, max)));
             if (ImGui.IsItemHovered())
-                ImGui.SetTooltip("Set the scale of the Raised icon that is drawn into the world on raised corpses.");
+                ImGui.SetTooltip("设置在世界中的被复活的尸体上绘制的已复活图标的尺寸。");
         }
 
         private static readonly string[] RectTypeStrings = new[]
         {
-            "Fill",
-            "Only Outline",
-            "Only Full Alpha Outline",
-            "Fill and Full Alpha Outline",
+            "填充",
+            "仅描边",
+            "仅不透明描边",
+            "填充与不透明描边",
         };
 
         private void DrawRectTypeSelector()
         {
             var type = (int) RezPls.Config.RectType;
-            if (!ImGui.Combo("Rectangle Type", ref type, RectTypeStrings, RectTypeStrings.Length))
+            if (!ImGui.Combo("矩形高亮框样式", ref type, RectTypeStrings, RectTypeStrings.Length))
                 return;
 
             ChangeAndSave(type, (int) RezPls.Config.RectType, t => RezPls.Config.RectType = (RectType) t);
@@ -326,7 +326,7 @@ namespace RezPls.GUI
             {
                 DrawEnabledCheckbox();
 
-                if (ImGui.CollapsingHeader("Raise Settings"))
+                if (ImGui.CollapsingHeader("复活设置"))
                 {
                     DrawEnabledRaiseCheckbox();
                     DrawRestrictJobsCheckbox();
@@ -335,7 +335,7 @@ namespace RezPls.GUI
                     ImGui.Dummy(horizontalSpacing);
                 }
 
-                if (ImGui.CollapsingHeader("Cleanse Settings"))
+                if (ImGui.CollapsingHeader("康复设置"))
                 {
                     DrawDispelHighlightingCheckbox();
                     DrawRestrictJobsDispelCheckbox();
@@ -346,7 +346,7 @@ namespace RezPls.GUI
                     ImGui.Dummy(horizontalSpacing);
                 }
 
-                if (ImGui.CollapsingHeader("General Settings"))
+                if (ImGui.CollapsingHeader("通用设置"))
                 {
                     DrawHideSymbolsOnSelfCheckbox();
                     DrawShowGroupCheckbox();
@@ -357,7 +357,7 @@ namespace RezPls.GUI
                     ImGui.Dummy(horizontalSpacing);
                 }
 
-                if (ImGui.CollapsingHeader("Colors"))
+                if (ImGui.CollapsingHeader("颜色"))
                 {
                     DrawCurrentRaiseColorPicker();
                     DrawAlreadyRaisedColorPicker();
@@ -372,7 +372,7 @@ namespace RezPls.GUI
                     ImGui.Dummy(horizontalSpacing);
                 }
 
-                if (ImGui.CollapsingHeader("Testing"))
+                if (ImGui.CollapsingHeader("测试"))
                 {
                     DrawTestModeCheckBox1();
                     DrawTestModeCheckBox2();
